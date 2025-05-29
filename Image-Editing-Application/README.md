@@ -10,6 +10,14 @@ also uses Java SWing for an interactive GUI.
 - **View** represents the user interface (Terminal-Based or Graphical Interface).
 - **Controller** represents and manages the interaction between the model and view.
 
+## Accessing the Code
+
+If you're interested in exploring the full source code of this project, feel free to reach out to me via 
+[LinkedIn](https://www.linkedin.com/in/ksheerajp) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
+
+🔗 GitHub Repository (private): [https://github.com/KsheerajP/Image-Editing-Application.git](https://github.com/KsheerajP/Image-Editing-Application.git)
+
+
 ## How to Run
 Use the `main(String[] args)` method in the [`Main`](src/Main.java) class with the appropriate
 argument(s).  
