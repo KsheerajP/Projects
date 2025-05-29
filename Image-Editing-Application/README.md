@@ -13,7 +13,7 @@ also uses Java SWing for an interactive GUI.
 ## Accessing the Code
 
 If you're interested in exploring the full source code of this project, feel free to reach out to me via 
-[LinkedIn](https://www.linkedin.com/in/ksheerajp) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
+[LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
 
 🔗 GitHub Repository (private): [https://github.com/KsheerajP/Image-Editing-Application.git](https://github.com/KsheerajP/Image-Editing-Application.git)
 
