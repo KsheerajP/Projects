@@ -1,4 +1,4 @@
-# CS5010-PDP-Fall2024-Assignment-6
+# CS5010-Programming Design Paradigm-Project
 ## GRIME: Graphical Image Manipulation and Enhancement
 
 ## Overview
@@ -166,32 +166,3 @@ It is licensed under a Creative Commons Attribution-Share Alike 4.0 Internationa
 You may find the image [here](https://commons.m.wikimedia.org/wiki/File:Red_Square_(2x2_Pixel).png).
 
 ---
-
-## Design Changes and Justification
-
-The following design changes were made from the previous version to enhance the functionality of the
-application:
-
-**1. Histogram Generation:** The HistogramGenerator class was changed to produce a line chart
-instead of the solid histogram from before. It still will mix colors when pixels overlap.
-    - *Justification*: We did not realize that the histogram had to be a line chart in the previous
-assignment so we've fixed that now. I had thought the line chart shown in the assignment page was
-just a suggestion, not the expectation. We still decided to keep the mixing of colors for
-overlapping pixels 
-
-**2. Adjustments to SimpleController, LoadCommand, and SaveCommand:** We discovered an oversight
-where the program would not support directories that contained paths with spaces in them. To account
-for this we made adjustments to these classes that allows the user to input a directory surrounded
-by quotation marks.  
-    - *Justification*: This is fixing an error that we had not accounted for previously, it is not
-changing the core fonctionality of any class.
-
-**3. Changes to ImageModel for masking** To add the masking functionality we added a new method to 
-the model that applies a transformation with a mask. We added new cases for the command objects that
-check if the "mask" parameter is given and acts accordingly.
-    - *Justification*: Similarly to when we implemented splitting, we added anew method to the model
-because adding one new method will not interfere with previous usage of the model and we found it 
-preferable compared to adding a new interface and class just to add one method, cutting into our 
-file number limit. We added new cases tot he if statements int he ControllerCommand classes with the
-same rationale: adding the new functionality does not impede previous usage of the object and adding
-many new classes for a small change is wasteful with regards to number of files.
