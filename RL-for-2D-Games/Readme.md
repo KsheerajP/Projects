@@ -1,55 +1,50 @@
-# T-Shirt Size Estimation Using Monocular Camera Images
+from pathlib import Path
+
+# Re-define the README content after code execution state reset
+footsies_readme = """
+# FOOTSIES: Reinforcement Learning Agent for 2D Fighting Games
 
 ## Overview
-This project presents a vision-based system that estimates the T-shirt size of a person from a single monocular image. It explores and compares three approaches:  
-1. A fast baseline method using MediaPipe landmarks.  
-2. A geometric method involving perspective correction and reference scaling.  
-3. A deep learning model trained on real-world anthropometric datasets.
-
-This system demonstrates practical potential for contactless sizing in e-commerce and apparel recommendations.
+This project implements a reinforcement learning (RL) agent capable of playing the 2D fighting game **FOOTSIES** using a deep Q-learning architecture. The agent observes game frames, interprets spatial states using a Convolutional Neural Network (CNN), and makes decisions using a Deep Q-Network (DQN). The project demonstrates real-time strategic behavior such as blocking, spacing, and attacking.
 
 ---
 
 ## Features
-- Pose estimation and body landmark detection using **MediaPipe**.
-- Perspective geometry-based height and width approximation.
-- Deep Learning-based body measurement prediction using CNN architecture.
-- Preprocessing includes background removal, normalization, and patch extraction.
-- Size classification (XS, S, M, L, XL, XXL) using estimated upper body width and chest circumference.
-- Modular architecture supporting both image-based and real-time webcam input.
+- Visual state extraction using OpenCV and grayscale preprocessing.
+- Frame stacking for temporal awareness.
+- Deep Q-Network (DQN) with epsilon-greedy exploration strategy.
+- Action space: Move Left, Move Right, Standard Attack, Charged Attack.
+- Reward structure based on game win, shield loss, and survival time.
+- Real-time keystroke control for game simulation.
 
 ---
 
-## Dataset
-The deep learning model is trained on real anthropometric datasets, including:
-- **ZOZOTOWN** (Japan-based apparel sizing and measurement database)
-- **CAESAR** dataset and additional open-source measurement data
-- Synthetic augmentations for improved generalization
+## Architecture
+- **CNN**: Extracts spatial features from stacked frames.
+- **DQN**: Maps state-action pairs to Q-values to guide action selection.
+- **Experience Replay**: Stores transitions for stable learning.
+- **Target Network**: Updates every N episodes for Q-value stability.
 
----
-
-## System Pipeline
-1. **Input Image**: Single RGB image from monocular camera (e.g., phone/webcam)
-2. **Pose Detection**: Using MediaPipe's BlazePose to detect landmarks
-3. **Perspective Correction**: Align body posture and scale using reference object
-4. **Feature Extraction**: Crop and measure regions of interest (e.g., chest)
-5. **Model Inference**: Pass through CNN for measurement estimation
-6. **Size Classification**: Use predicted measurement to classify size
+### Hyperparameters
+- Learning Rate: 0.001  
+- Discount Factor (γ): 0.99  
+- Epsilon Decay Rate: 0.9995  
+- Memory Capacity: 10,000  
+- Batch Size: 64  
+- Episodes: 1000  
+- Target Network Update Frequency: 5 Episodes
 
 ---
 
 ## Results
-- Achieved up to **89% accuracy** on front-facing images with minimal background clutter using the DL model.
-- Geometric model yielded competitive results under ideal reference object placement.
-- Fast MediaPipe-only estimation gave instant feedback with slightly lower precision.
-- Performance metrics:
-  - Accuracy: 89% (Deep Learning), ~81% (Geometric), ~75% (Baseline)
-  - F1-score: 0.86 (DL), 0.78 (Geo)
+- Demonstrated strategic combat behavior across 1000+ episodes.
+- Observed defensive blocking, spacing, and timing of charged attacks.
+- Cumulative rewards show learning patterns, though with room for improvement.
+- Real-time decision-making with ~3 actions/sec on limited hardware.
 
 ---
 
 ## How to Run
-
-### Prerequisites
-- Python 3.7+
-- Install dependencies:
+1. Clone the repository and install required dependencies:
+   ```bash
+   pip install -r requirements.txt
