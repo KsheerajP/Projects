@@ -1,54 +1,46 @@
-# 🎓 Project Showcase – Ksheeraj Prakash
+# Ksheeraj Prakash – Projects Repository
 
-Hi! I’m Ksheeraj, a Master’s student in Artificial Intelligence at Northeastern University. This repository features highlights of the technical projects I’ve worked on. These cover applications of machine learning, computer vision, reinforcement learning, and image processing.
+Welcome! This repository contains summaries of my academic and personal projects developed as part of my Master's in Artificial Intelligence at Northeastern University. The full code and implementation details for each project are **kept private**.
 
-⚠️ **Note:** Due to academic and privacy policies, the actual code is kept in private repositories. However, I’m happy to share access on request. Please reach out via [LinkedIn](https://linkedin.com/in/your-profile) or email.
+Please contact me if you'd like access for academic, review, or collaborative purposes.
 
----
+**Note:** Due to academic and privacy policies, the actual code is kept in private repositories. However, I’m happy to share access on request. Please reach out via [LinkedIn](https://linkedin.com/in/your-profile) or email.
 
-## 📌 Projects
+### 1. **GRIME: Image Editing Application**  
+A modular Java-based application supporting over 15 image transformations with GUI and terminal interfaces. Includes features like compression, histogram equalization, color correction, and split previews.  
+🔗 [View Project](https://github.com/KsheerajP/Image-Editing-Application)  
+📬 Contact for access.
 
-### 1. Early Detection of Parkinson’s Disease Using Voice Analysis
-- **Type:** Machine Learning | Health Tech
-- **Tools:** Python, Scikit-learn, SMOTE, SelectKBest
-- **Summary:** Built a machine learning pipeline to detect early Parkinson’s from patient voice data. Achieved 90% accuracy using models like MLP, SVM, and Random Forest.
-- **Code Access:** Available on request.
+### 2. **T-Shirt Size Estimation from Images**  
+Vision-based pipeline that estimates T-shirt sizes using MediaPipe, perspective geometry, and a deep learning model trained on anthropometric datasets.  
+📬 Contact for access.
 
----
+### 3. **Footsies: Reinforcement Learning Game AI**  
+A fighting game AI trained via deep Q-learning to beat human-like opponents by balancing offensive and defensive strategies.  
+📬 Contact for access.
 
-### 2. T-Shirt Size Estimation from Monocular Images
-- **Type:** Computer Vision | Deep Learning
-- **Tools:** MediaPipe, OpenCV, CNNs, PyTorch
-- **Summary:** Developed a system to predict T-shirt sizes using body landmarks and geometric correction. Deep learning model reached 89% accuracy.
-- **Code Access:** Available on request.
+### 4. **Parkinson’s Disease Detection**  
+Achieved 90% accuracy on real patient data by using voice-based features and models like MLP, SVM, and Random Forest. Integrated SMOTE and feature selection.  
+📬 Contact for access.
 
----
+### 5. **Emotion Detection with Music Recommendation**  
+Multi-modal emotion detection using facial, voice, and text inputs. Achieved 88%+ accuracy. Recommends music dynamically based on emotion.  
+📬 Contact for access.
 
-### 3. Graphical Image Manipulation & Enhancement App
-- **Type:** Java | Image Processing
-- **Tools:** Java, Swing, MVC, Command Pattern
-- **Summary:** Designed a desktop image editor supporting 15+ effects like blur, sharpen, histogram equalization, and batch editing. Includes both GUI and terminal mode.
-- **Code Access:** Available on request.
+### 6. **V2V Communication System (IoT)**  
+Built a VANET-based vehicle-to-vehicle communication system using GPS, GSM, and Arduino modules for collision prevention and traffic safety alerts.  
+📬 Contact for access.
 
----
-
-### 4. FOOTSIES – Reinforcement Learning Agent for Fighting Games
-- **Type:** Reinforcement Learning | Game AI
-- **Tools:** Python, DQN, OpenCV, CNN
-- **Summary:** Trained a DQN agent to learn visual cues and actions in a 2D fighting game using frame stacking and reward shaping.
-- **Code Access:** Available on request.
+### 7. **GPS Precision Enhancement Using Kalman & Fuzzy Logic**  
+Enhanced GPS accuracy using real-time kinematic techniques, ANFIS, and Kalman filtering. Reduced location error from meters to centimeters.  
+📬 Contact for access.
 
 ---
 
-## 🔐 How to Request Code
+## How to Request Code
 
 To request access to any of the private repositories:
 
-1. Message me on [LinkedIn](https://linkedin.com/in/your-profile)  
-2. Or email me at: `your_email@example.com`
+- 📧 **Email**: ksheerooo@gmail.com  
+- 💼 **LinkedIn**: [linkedin.com/in/ksheerajprakash](https://linkedin.com/in/ksheerajprakash)
 
-I’ll send an invite to the relevant GitHub repo. Happy to connect and discuss more!
-
----
-
-Thank you for stopping by 😊  
