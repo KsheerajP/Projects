@@ -1,7 +1,3 @@
-from pathlib import Path
-
-# Re-define the README content after code execution state reset
-footsies_readme = """
 # FOOTSIES: Reinforcement Learning Agent for 2D Fighting Games
 
 ## Overview
