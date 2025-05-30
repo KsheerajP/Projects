@@ -3,33 +3,25 @@
 ## Overview
 This project implements a multi-modal emotion recognition system that analyzes user inputs from facial expressions, voice signals, and text to determine emotional state and suggests music accordingly. It aims to enhance user well-being and personalization in music playback using deep learning and psychological emotion-music mapping models.
 
----
+## Accessing the Code
 
-## Features
-- Facial Emotion Detection using **DeepFace CNN** for expression analysis.
-- Voice Emotion Classification using **MFCC feature extraction** and traditional ML classifiers.
-- Text Sentiment Analysis using **VADER**, **NLTK**, and keyword-based mapping.
-- Mood-to-Music mapping using **Valence-Arousal models** and genre-based matching.
-- Real-time emotion sensing with **offline-compatible playback interface**.
+If you're interested in exploring the full complete code of this project, feel free to reach out to me via 
+[LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
 
----
+🔗 GitHub Repository (private): [https://github.com/KsheerajP/Emotion-Detection-and-Music-Selection.git](https://github.com/KsheerajP/Emotion-Detection-and-Music-Selection.git)
 
-## Dataset
-This system uses a combination of public datasets:
-- **FER2013** for facial emotion classification.
-- **RAVDESS** and **CREMA-D** for voice emotion recognition.
-- Custom-labeled text sentiment samples for training the NLP model.
+## How It Works
+The system takes in three types of inputs from the user:
+- **Facial Expressions** – captured through a webcam or image to sense visible emotions.
+- **Voice** – short voice samples are used to assess tone and mood.
+- **Text** – user-typed input is scanned for emotion-related cues.
 
----
+These inputs are processed to determine whether the person is feeling happy, sad, angry, relaxed, etc. Based on this detected emotional state, the system automatically recommends a matching genre or playlist.
+
+It’s also built to work in real time and can run offline once set up.
 
 ## Results
-- Achieved maximum accuracy of **88%** across facial, voice, and text detection modules.
-- F1-score of **0.85** across the multi-modal classifier.
-- User testing showed high relevance of music suggestions to perceived emotional state.
+- The system achieved **up to 88% accuracy** in detecting emotional states from the different input types.
+- The overall **F1-score is 0.85**, showing balanced performance across different emotion categories.
+- In user testing, the music suggestions were found to be **highly relevant** to the actual emotions, improving user satisfaction and personalization.
 
----
-
-## How to Run
-1. Clone the repository and install the dependencies:
-```bash
-pip install -r requirements.txt
