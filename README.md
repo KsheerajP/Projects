@@ -1,37 +1,57 @@
-# Ksheeraj Prakash – Projects Repository
+# Projects Repository
 
-Welcome! This repository contains summaries of my academic and personal projects.
+Welcome! This repository showcases a curated collection of academic and personal projects focused on the fields of Artificial Intelligence and Electronics.
 
-## How to Request Code
+Each project explores a unique domain of problem-solving, utilising modern techniques in computer vision, machine learning, reinforcement learning, and embedded systems.
 
-To request access to any of the private repositories:
+---
 
-- 📧 **Email**: ksheerooo@gmail.com  
-- 💼 **LinkedIn**: [linkedin.com/in/ksheerajprakash](https://linkedin.com/in/ksheerajprakash)
+## How to Request Full Code Access
 
-**Note:** Due to academic and privacy policies, the actual code is kept in private repositories. However, I’m happy to share access on request. Please reach out via [LinkedIn](https://linkedin.com/in/your-profile) or email.
+Most projects are stored in private repositories to maintain academic integrity.
 
-### 1. **GRIME: Image Editing Application**  
-A modular Java-based application supporting over 15 image transformations with GUI and terminal interfaces. Includes features like compression, histogram equalization, color correction, and split previews.  
-🔗 [View Project](https://github.com/KsheerajP/Image-Editing-Application)  
+However, I’m happy to provide access for interviews, collaboration, or evaluation purposes.
 
-### 2. **T-Shirt Size Estimation from Images**  
-Vision-based pipeline that estimates T-shirt sizes using MediaPipe, perspective geometry, and a deep learning model trained on anthropometric datasets.  
+**Contact me via:**
+- **Email:** ksheerooo@gmail.com  
+- **LinkedIn:** [linkedin.com/in/ksheerajprakash](https://linkedin.com/in/ksheerajprakash)
 
-### 3. **Footsies: Reinforcement Learning Game AI**  
-A fighting game AI trained via deep Q-learning to beat human-like opponents by balancing offensive and defensive strategies.  
+---
 
-### 4. **Parkinson’s Disease Detection**  
-Achieved 90% accuracy on real patient data by using voice-based features and models like MLP, SVM, and Random Forest. Integrated SMOTE and feature selection.  
+## Projects
 
-### 5. **Emotion Detection with Music Recommendation**  
-Multi-modal emotion detection using facial, voice, and text inputs. Achieved 88%+ accuracy. Recommends music dynamically based on emotion.  
+### 1. [**Graphical Image Manipulation and Enhancement Application**](https://github.com/KsheerajP/Projects/tree/main/Image-Editing-Application)  
+Designed and built an extensible Java-based image processing application with support for over 15 transformations.
 
-### 6. **V2V Communication System (IoT)**  
-Built a VANET-based vehicle-to-vehicle communication system using GPS, GSM, and Arduino modules for collision prevention and traffic safety alerts.  
+---
 
-### 7. **GPS Precision Enhancement Using Kalman & Fuzzy Logic**  
-Enhanced GPS accuracy using real-time kinematic techniques, ANFIS, and Kalman filtering. Reduced location error from meters to centimeters.  
+### 2. [**T-Shirt Size Estimation Using Monocular Camera Images**](https://github.com/KsheerajP/Projects/tree/main/T-Shirt-Size-Estimation)  
+Developed a vision-based system to predict T-shirt size from a single image using pose detection, geometric correction, and deep learning techniques.
+
+---
+
+### 3. [**Footsies: Reinforcement Learning for 2D Fighting Games**](https://github.com/KsheerajP/Projects/tree/main/RL-for-2D-Games)  
+Developed a reinforcement learning agent to play a 2D fighting game for visual state representation.
+
+---
+
+### 4. [**Early Detection of Parkinson’s Disease Using Machine Learning**](https://github.com/KsheerajP/Projects/tree/main/Parkinson-Disease-Detection)  
+Developed a machine learning pipeline to detect early signs of Parkinson’s Disease using voice recordings from real patient data.
+
+---
+
+### 5. [**AI based Emotion Detection and Music Selection**](https://github.com/KsheerajP/Projects/tree/main/Emotion-Detection-and-Music-Selection)  
+A multimodal system using facial, voice, and text-based emotion detection to drive music recommendations dynamically.
+
+---
+
+### 6. [**Vehicle-to-Vehicle Communication using IoT**](https://github.com/KsheerajP/Projects/tree/main/V2V-Communication)  
+A vehicle-to-vehicle communication system using GPS and GSM modules for traffic awareness and collision avoidance.
+
+---
+
+### 7. [**Techniques to Improve the GPS Precision**](https://github.com/KsheerajP/Projects/tree/main/GPS-Precision)  
+Developed algorithms using Kalman filters and fuzzy logic to enhance GPS accuracy in dynamic environments.
 
 ---
 
