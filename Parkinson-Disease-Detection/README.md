@@ -4,7 +4,7 @@
 This project focuses on building a machine learning-based pipeline to detect early signs of Parkinson’s Disease using voice recordings. It aims to offer a non-invasive, low-cost method that could assist in remote diagnostics and telehealth applications.
 
 ## Accessing the Code
-If you're interested in exploring the full source code of this project, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
+If you're interested in exploring the complete code of this project, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
 
 🔗 GitHub Repository (private): [https://github.com/KsheerajP/Parkinson-Disease-Detection](https://github.com/KsheerajP/Parkinson-Disease-Detection.git)
 
