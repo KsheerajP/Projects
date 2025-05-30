@@ -31,7 +31,6 @@ Multi-modal emotion detection using facial, voice, and text inputs. Achieved 88%
 Built a VANET-based vehicle-to-vehicle communication system using GPS, GSM, and Arduino modules for collision prevention and traffic safety alerts.  
 
 ### 7. **GPS Precision Enhancement Using Kalman & Fuzzy Logic**  
-
 Enhanced GPS accuracy using real-time kinematic techniques, ANFIS, and Kalman filtering. Reduced location error from meters to centimeters.  
 ---
 
