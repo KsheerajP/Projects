@@ -32,5 +32,6 @@ Built a VANET-based vehicle-to-vehicle communication system using GPS, GSM, and 
 
 ### 7. **GPS Precision Enhancement Using Kalman & Fuzzy Logic**  
 Enhanced GPS accuracy using real-time kinematic techniques, ANFIS, and Kalman filtering. Reduced location error from meters to centimeters.  
+
 ---
 
