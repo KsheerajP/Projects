@@ -25,7 +25,7 @@ Designed and built an extensible Java-based image processing application with su
 
 ---
 
-### 2. [**T-Shirt Size Estimation Using Monocular Camera Images**](https://github.com/KsheerajP/Projects/tree/main/T-Shirt-Size-Estimation)  
+### 2. [**T-Shirt Size Estimation Using Monocular Camera**](https://github.com/KsheerajP/Projects/tree/main/T-Shirt-Size-Estimation)  
 Developed a vision-based system to predict T-shirt size from a single image using pose detection, geometric correction, and deep learning techniques.
 
 ---
