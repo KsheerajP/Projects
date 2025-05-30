@@ -1,4 +1,3 @@
-# CS5010-Programming Design Paradigm-Project
 ## GRIME: Graphical Image Manipulation and Enhancement
 
 ## Overview
