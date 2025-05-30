@@ -53,5 +53,3 @@ A vehicle-to-vehicle communication system using GPS and GSM modules for traffic 
 ### 7. [**Techniques to Improve the GPS Precision**](https://github.com/KsheerajP/Projects/tree/main/GPS-Precision)  
 Developed algorithms using Kalman filters and fuzzy logic to enhance GPS accuracy in dynamic environments.
 
----
-
