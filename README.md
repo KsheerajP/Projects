@@ -1,6 +1,6 @@
 # Ksheeraj Prakash – Projects Repository
 
-Welcome! This repository contains summaries of my academic and personal projects developed as part of my Master's in Artificial Intelligence at Northeastern University. The full code and implementation details for each project are **kept private**.
+Welcome! This repository contains summaries of my academic and personal projects.
 
 ## How to Request Code
 
