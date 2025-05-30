@@ -1,7 +1,7 @@
 # T-Shirt Size Estimation Using Monocular Camera
 
 ## Overview
-This project presents a computer vision pipeline that estimates a person's T-shirt size using just a single image from a monocular camera. It aims to solve a common challenge in online retail: determining accurate clothing sizes without the need for physical trials or measurements.
+This project presents a computer vision pipeline that estimates a person's T-shirt size using just a single image from a monocular camera. It aims to solve a common challenge in online retail, which is determining accurate clothing sizes without the need for physical trials or measurements.
 
 ## Accessing the Code
 If you're interested in exploring the full source code of this project, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
