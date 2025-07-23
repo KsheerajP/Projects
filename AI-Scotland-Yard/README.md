@@ -58,5 +58,44 @@ The simulation framework was tested over **406 full-length AI-controlled games**
 
 These results show that the game environment provides a realistic, strategic challenge for both AI and human players. The backend and AI integration demonstrate robust real-time decision-making and smooth failover handling during gameplay.
 
+## How It Works
 
+The system simulates the Scotland Yard board game by representing the London map as a **transport graph**, implemented in a robust C backend for efficient pathfinding (using BFS and Dijkstra algorithms)[8][4]. This engine is accessed in Python via **pybind11 bindings**, providing high-performance core gameplay to both the FastAPI-powered multiplayer backend and large AI simulation scripts[4][16]. **Game state** is managed in real time using Redis; if Redis is unavailable, storage transparently falls back to persistent JSON files for reliability[2][13]. All moves, player data, and analytics are also logged to SQLite and CSVs for research and replay[1][6][12].
+
+- **Detective agents** use **Monte Carlo Tree Search (MCTS)** over short lookahead horizons to chase Mr. X, prioritizing shortest-path moves and optimizing for speed and surround[7].
+- **Mr. X's strategy** is controlled by a **Q-learning reinforcement learning agent**, which dynamically adapts to avoid capture, taking into account factors such as visibility rounds, ticket and inventory strategy, and proximity to detectives[9][15][10].
+- The **backend** exposes real-time gameplay and turn management using WebSockets, automatic AI takeover on player disconnection or inactivity, and live exports detailed analytics per game for benchmarking and research[16].
+- A **command-line/script interface** is included for running large-scale, reproducible AI simulations, supporting automated RL training, gameplay benchmarking, and meta-analysis[15].
+
+---
+
+## Results
+
+Over **406 complete simulated games**:
+
+- **Detectives won 77.34%** of games, while **Mr. X escaped in 20.44%**; **2.22%** of games were incomplete or terminated early[11].
+- **Most common tickets used:**  
+  - Taxi: **11,232**  
+  - Bus: **3,641**  
+  - Underground: **763**  
+  - Secret: **31** (used for stealth by Mr. X)[11][17][18]
+- The **average game lasted 8.33 rounds**, with detectives often coordinating aggressively and leveraging MCTS for efficient captures[11].
+- The **AI takeover system** handled disconnections automatically, with each player experiencing on average **~17 AI-controlled turns** per game, keeping gameplay uninterrupted[11].
+- Detailed analytics and full move logging are provided for every game, supporting advanced training and meta-analysis[6][1].
+
+---
+
+### Visual Results
+
+#### Most Common Tickets Used
+
+![Most Common Tickets Used](tickts_usage.jpg)
+
+#### Game Win/Loss Distribution
+
+![Game Win/Loss Distribution](win_rate.jpg)
+
+---
+
+These results demonstrate a robust, research-grade platform for adversarial AI, reinforcement learning benchmarking, and empirical analytics in board game simulations.
 
