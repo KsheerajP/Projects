@@ -8,7 +8,7 @@ This project is a digital simulation of the classic *Scotland Yard* board game p
 If you're interested in exploring the full complete code of this project, feel free to reach out to me via 
 [LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
 
-🔗 GitHub Repository (private): [https://github.com/KsheerajP/Emotion-Detection-and-Music-Selection.git](https://github.com/KsheerajP/Emotion-Detection-and-Music-Selection.git)
+🔗 GitHub Repository (private): [https://github.com/KsheerajP/AI-Scotland-Yard.git](https://github.com/KsheerajP/AI-Scotland-Yard.git)
 
 ## How It Works
 - **Graph Engine**: London’s map is modeled using an adjacency list in C (`Graph` struct).
