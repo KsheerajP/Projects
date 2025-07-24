@@ -53,3 +53,7 @@ A vehicle-to-vehicle communication system using GPS and GSM modules for traffic 
 ### 7. [**Techniques to Improve the GPS Precision**](https://github.com/KsheerajP/Projects/tree/main/GPS-Precision)  
 Developed algorithms using Kalman filters and fuzzy logic to enhance GPS accuracy in dynamic environments.
 
+---
+
+### 8. [**AI-Driven Scotland Yard Game Simulation**](https://github.com/KsheerajP/Projects/tree/main/AI-Scotland-Yard)  
+Built a multiplayer board game engine powered by a C-based graph module and Python AI agents using MCTS and reinforcement learning strategies.
