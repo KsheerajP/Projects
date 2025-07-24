@@ -12,32 +12,17 @@ If you're interested in exploring the full complete code of this project, feel f
 
 ## How It Works
 
-The Scotland Yard simulation models the London game board as a graph in C using an adjacency list, with each node representing a station and each edge representing a transport route (Taxi, Bus, Underground, Ferry). The system is designed for speed and efficiency:
+This project digitally recreates the Scotland Yard board game, enabling both AI and human players to move across a map of London, with each station and route managed by a fast C-based graph engine exposed to Python. The backend handles all turns, player decisions, and game rules in real time, using web technologies for multiplayer support. AI detectives plan their moves to corner Mr. X, who uses adaptive strategies to escape, and the whole system can automatically fill in for missing players
 
-- **Graph Engine in C**: The map is built using custom structures (`Graph`, `Station`, and `Edge`) optimized for traversal and memory usage. Graph connections are loaded from a `.txt` file into the engine.
+ - The map and pathfinding are powered by a high-speed C graph engine, seamlessly integrated into Python.
 
-- **Pathfinding Algorithms**:  
-  - **Breadth-First Search (BFS)** is used for quickly identifying reachable stations for move validation.  
-  - **Dijkstra’s Algorithm** is applied to calculate shortest paths, aiding both detective pursuit and Mr. X’s evasion strategy.
+ - Detectives use MCTS-based AI to coordinate pursuit, while Mr. X uses reinforcement learning to learn escape strategies over many games.
 
-- **Python Integration via pybind11**:  
-  The C-based graph module is compiled and exposed to Python as a `graph_engine` extension, allowing Python logic to interact with low-level data structures and algorithms efficiently.
+ - All game logic, multiplayer functionality, and analytics are managed by a FastAPI backend, and the platform runs in Docker for easy deployment anywhere.
 
-- **Game Logic (Python Backend)**:  
-  The backend uses FastAPI to handle player movement, visibility rules, ticket tracking, and game progression. Redis provides real-time, in-memory state updates and messaging between clients via WebSockets.
-
-- **AI Agents**:  
-  - **Detectives** use greedy strategies based on shortest paths to chase Mr. X.  
-  - **Mr. X** employs reinforcement learning (Q-Learning) with a zoning strategy to escape or mislead pursuers.  
-  - AI automatically takes over when a player is disconnected or inactive, ensuring uninterrupted gameplay.
-
-- **CLI and Simulation Interface**:  
-  - Players can play through a command-line interface, which prompts for legal moves based on current station and ticket inventory.  
-  - Developers can simulate hundreds of games using automated scripts for benchmarking and AI evaluation.
-
-
+Anyone can play against smart AI or watch AI vs. AI games, with the system automatically handling all aspects of gameplay and strategy.
+    
 ## Results
-
 The simulation framework was tested over **406 full-length AI-controlled games** under randomized conditions. The following key observations were recorded:
 
 - **Win Rate Analysis**:
@@ -58,15 +43,6 @@ The simulation framework was tested over **406 full-length AI-controlled games**
 
 These results show that the game environment provides a realistic, strategic challenge for both AI and human players. The backend and AI integration demonstrate robust real-time decision-making and smooth failover handling during gameplay.
 
-## How It Works
 
-The system simulates the Scotland Yard board game by representing the London map as a **transport graph**, implemented in a robust C backend for efficient pathfinding (using BFS and Dijkstra algorithms)[8][4]. This engine is accessed in Python via **pybind11 bindings**, providing high-performance core gameplay to both the FastAPI-powered multiplayer backend and large AI simulation scripts[4][16]. **Game state** is managed in real time using Redis; if Redis is unavailable, storage transparently falls back to persistent JSON files for reliability[2][13]. All moves, player data, and analytics are also logged to SQLite and CSVs for research and replay[1][6][12].
-
-- **Detective agents** use **Monte Carlo Tree Search (MCTS)** over short lookahead horizons to chase Mr. X, prioritizing shortest-path moves and optimizing for speed and surround[7].
-- **Mr. X's strategy** is controlled by a **Q-learning reinforcement learning agent**, which dynamically adapts to avoid capture, taking into account factors such as visibility rounds, ticket and inventory strategy, and proximity to detectives[9][15][10].
-- The **backend** exposes real-time gameplay and turn management using WebSockets, automatic AI takeover on player disconnection or inactivity, and live exports detailed analytics per game for benchmarking and research[16].
-- A **command-line/script interface** is included for running large-scale, reproducible AI simulations, supporting automated RL training, gameplay benchmarking, and meta-analysis[15].
-
----
 
 
