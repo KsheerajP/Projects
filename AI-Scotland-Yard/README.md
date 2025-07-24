@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a digital simulation of the classic *Scotland Yard* board game powered by AI agents and graph-based pathfinding. The core logic is written in C for performance and exposed to Python using `pybind11`. A Python backend (FastAPI + Redis) powers both human and AI-driven multiplayer games via WebSockets and command-line interfaces.
+This project is a digital version of the Scotland Yard board game, where computer players move around a map of London. You can play against the AI or watch the computer play both sides. Detectives try to catch Mr. X, who uses different moves to hide and escape. The system handles the flow of the game and decides each player’s actions, making it easy to see how different strategies play out as the game progresses.
 
 ## Accessing the Code
 If you're interested in exploring the full complete code of this project, feel free to reach out to me via 
@@ -69,33 +69,4 @@ The system simulates the Scotland Yard board game by representing the London map
 
 ---
 
-## Results
-
-Over **406 complete simulated games**:
-
-- **Detectives won 77.34%** of games, while **Mr. X escaped in 20.44%**; **2.22%** of games were incomplete or terminated early[11].
-- **Most common tickets used:**  
-  - Taxi: **11,232**  
-  - Bus: **3,641**  
-  - Underground: **763**  
-  - Secret: **31** (used for stealth by Mr. X)[11][17][18]
-- The **average game lasted 8.33 rounds**, with detectives often coordinating aggressively and leveraging MCTS for efficient captures[11].
-- The **AI takeover system** handled disconnections automatically, with each player experiencing on average **~17 AI-controlled turns** per game, keeping gameplay uninterrupted[11].
-- Detailed analytics and full move logging are provided for every game, supporting advanced training and meta-analysis[6][1].
-
----
-
-### Visual Results
-
-#### Most Common Tickets Used
-
-![Most Common Tickets Used](tickts_usage.jpg)
-
-#### Game Win/Loss Distribution
-
-![Game Win/Loss Distribution](win_rate.jpg)
-
----
-
-These results demonstrate a robust, research-grade platform for adversarial AI, reinforcement learning benchmarking, and empirical analytics in board game simulations.
 
