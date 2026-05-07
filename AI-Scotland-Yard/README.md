@@ -2,47 +2,55 @@
 
 ## Overview
 
-This project is a digital version of the Scotland Yard board game, where computer players move around a map of London. You can play against the AI or watch the computer play both sides. Detectives try to catch Mr. X, who uses different moves to hide and escape. The system handles the flow of the game and decides each player’s actions, making it easy to see how different strategies play out as the game progresses.
+This project is a full-stack AI-powered adaptation of the Scotland Yard board game, where intelligent agents compete against each other across a digital map of London. Mr. X tries to stay hidden and evade capture, while a team of Detectives work together to track him down. The entire game from movement and strategy to multiplayer support and analytics is handled automatically by the system.
+
+What makes this project unique is the asymmetric AI design. Mr. X and the Detectives don't use the same strategy but they each have a completely different AI approach that reflects how each role actually plays in the real board game. You can play against the AI, watch two AIs compete, or run hundreds of simulated games to analyze outcomes and strategies.
 
 ## Accessing the Code
-If you're interested in exploring the full complete code of this project, feel free to reach out to me via 
-[LinkedIn](https://www.linkedin.com/in/ksheerajprakash) or email me at `ksheerooo@gmail.com`. I’ll be happy to provide access upon request.
 
-🔗 GitHub Repository (private): [https://github.com/KsheerajP/AI-Scotland-Yard.git](https://github.com/KsheerajP/AI-Scotland-Yard.git)
+If you're interested in exploring the full source code, documentation, or setup instructions, feel free to reach out for access for interviews, collaboration, or evaluation purposes.
+
+- **LinkedIn:** [linkedin.com/in/ksheerajprakash](https://www.linkedin.com/in/ksheerajprakash)
+- **Email:** ksheerooo@gmail.com
+
+🔗 GitHub Repository (private): [github.com/KsheerajP/AI-Scotland-Yard](https://github.com/KsheerajP/AI-Scotland-Yard.git)
 
 ## How It Works
 
-This project digitally recreates the Scotland Yard board game, enabling both AI and human players to move across a map of London, with each station and route managed by a fast C-based graph engine exposed to Python. The backend handles all turns, player decisions, and game rules in real time, using web technologies for multiplayer support. AI detectives plan their moves to corner Mr. X, who uses adaptive strategies to escape, and the whole system can automatically fill in for missing players
+The game is built in layers, each handling a different part of the system.
 
- - The map and pathfinding are powered by a high-speed C graph engine, seamlessly integrated into Python.
+**Graph Engine (C + Python)**
+The foundation of the game is a high-performance pathfinding engine written in C, integrated into Python via pybind11. It models all 199 London stations and 4 transport modes (Taxi, Bus, Underground, Ferry) as a graph, and uses BFS and Dijkstra's algorithm to compute routes and distances. This runs in sub-milliseconds and powers all AI decision-making in real time.
 
- - Detectives use MCTS-based AI to coordinate pursuit, while Mr. X uses reinforcement learning to learn escape strategies over many games.
+**Mr. X — Q-Learning Agent**
+Mr. X is controlled by a pre-trained reinforcement learning agent using Q-learning. Over thousands of training episodes, the agent learned which moves lead to successful escapes and which lead to capture. It maintains a Q-table with 100K+ state-action mappings, considers its distance from each detective, remaining tickets, and upcoming reveal turns, and uses a shaped reward system to balance survival, evasion, and risky moves like secret and double tickets.
 
- - All game logic, multiplayer functionality, and analytics are managed by a FastAPI backend, and the platform runs in Docker for easy deployment anywhere.
+**Detectives — Monte Carlo Tree Search**
+Each detective uses Monte Carlo Tree Search (MCTS) to plan moves. Instead of reacting greedily, the detective AI simulates 100 possible future game states per move across a 4-turn horizon, then picks the move with the best average outcome. This makes the detectives coordinate naturally by spreading out, cutting off escape routes, and closing in as the round limit approaches.
 
-Anyone can play against smart AI or watch AI vs. AI games, with the system automatically handling all aspects of gameplay and strategy.
-    
+**Backend and Multiplayer**
+All game logic runs on a FastAPI backend with real-time WebSocket support, so moves are broadcast instantly across all players. Redis stores live game state, and if a player disconnects mid-game, the AI automatically takes over their position by keeping the game running without interruption. The whole system is containerized with Docker for easy deployment.
+
+**Frontend**
+The game board is rendered using React and Pixi.js, showing all 199 London stations as an interactive map with real-time position updates, ticket counts, and turn history.
+
 ## Results
-The simulation framework was tested over **406 full-length AI-controlled games** under randomized conditions. The following key observations were recorded:
 
-- **Win Rate Analysis**:
-  - **Mr. X** successfully evaded capture in **20.44%** of games (83 wins), using a mix of secret moves, zoning, and double tickets.
-  - **Detectives** won in **77.34%** of games (341 wins) by coordinating using shortest-path strategies.
-  - **2.22%** of games (9 games) were incomplete or inconclusive due to forced terminations during simulation.
+The system was benchmarked across **406 full-length AI-controlled games** under randomized starting conditions. Here are the key findings:
 
-- **Ticket Usage Insights**:
-  - **Taxi** was the most commonly used transport, with over **11,232** uses.
-  - **Bus** followed with **3,641** uses, and **Underground** had **763** uses.
-  - **Secret tickets** (used by Mr. X) were deployed **31 times**, reflecting occasional stealthy escapes.
+**Win Rates:**
+- Detectives won **77.34%** of games (341 wins) by effectively coordinating pursuit using MCTS-based routing
+- Mr. X evaded capture in **20.44%** of games (83 wins), relying on secret moves, double tickets, and evasive zoning
+- **2.22%** of games (9 games) were incomplete due to forced simulation terminations
 
-- **AI Responsiveness**:
-  The AI takeover mechanism handled disconnections gracefully, with an average of **16.6 player takeovers per game** distributed across all five players. This ensured that games continued even when manual input was unavailable.
+**Ticket Usage (15,637 total moves):**
+- Taxi: 11,232 uses (71.8%) — most common, short-range movement
+- Bus: 3,641 uses (23.3%) — medium-range coverage
+- Underground: 763 uses (4.9%) — fast long-range jumps
+- Secret Tickets: 31 uses — deployed by Mr. X to hide transport type at critical moments
 
-- **Game Length**:
-  The average game lasted **8.33 turns**, with early captures occurring frequently due to optimized detective routing and limited evasive options on a dense map.
+**Game Metrics:**
+- Average game length: **8.33 rounds** before capture or timeout
+- AI takeovers: **80+ instances** across 406 games (~16.6 per game), ensuring every game completed without manual input
 
-These results show that the game environment provides a realistic, strategic challenge for both AI and human players. The backend and AI integration demonstrate robust real-time decision-making and smooth failover handling during gameplay.
-
-
-
-
+These results show that the detective AI consistently outperforms Mr. X under standard conditions, though Mr. X's win rate increases noticeably when secret and double tickets are used strategically in the mid-game.
