@@ -20,12 +20,12 @@ However, I’m happy to provide access for interviews, collaboration, or evaluat
 
 ## Projects
  
-### 1. [**MEDIC — Voice-to-PCR EMS Documentation Assistant**](https://github.com/KsheerajP/Projects/tree/main/Voice-to-PCR-EMS)
+### 1. [**MEDIC — Voice-to-PCR EMS Documentation Assistant**](https://github.com/KsheerajP/Projects/tree/main/Voice-to-PCR-Assistant-for-EMS)
 A fully local, privacy-first AI assistant that converts paramedic speech into structured Pre-hospital Care Reports in real-time across 23 NEMSIS clinical fields — zero PHI cloud transmission. Fine-tuned T5-base on 2,398 synthetic transcripts grounded in 60M national EMS activations, achieving 86.2% F1 — 22.6pp above a Llama 3.1 8B zero-shot baseline — with a 0.8% hallucination rate and 4.5s inference latency.
  
 ---
  
-### 2. [**Planory — Full-Stack Personal Productivity Web App**](https://github.com/KsheerajP/Projects/tree/main/Planory)
+### 2. [**Planory — Full-Stack Personal Productivity Web App**](https://github.com/KsheerajP/Projects/tree/main/ProgressTracker)
 A mobile-first productivity PWA with 6 integrated views — Planner, Timeline, Calendar, Activity, Insights, and Pending — built with Next.js, React, TypeScript, and Supabase. Features Google Calendar integration with DST-aware repeat event logic, habit tracking with completion analytics, and a centralized React Context managing 50+ state variables across all views.
  
 ---
@@ -35,7 +35,7 @@ A full-stack AI simulation platform for the Scotland Yard board game featuring a
  
 ---
  
-### 4. [**Toxicity Detection with Classical and Transformer Models**](https://github.com/KsheerajP/Projects/tree/main/Toxicity-Detection)
+### 4. [**Toxicity Detection with Classical and Transformer Models**](https://github.com/KsheerajP/Projects/tree/main/Toxicity-Detector)
 A comparative study of TF-IDF + MLP vs. fine-tuned transformer models (BERT, BERTweet, HateBERT) for multi-label toxic comment detection across 159K+ Wikipedia comments. HateBERT achieved 98.95% accuracy and 94.84% F1 in-domain, evaluated cross-domain on 10K Reddit comments to analyze generalization and domain transfer.
  
 ---
