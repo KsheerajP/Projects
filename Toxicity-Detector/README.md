@@ -70,4 +70,4 @@ Feel free to reach out for access for interviews, collaboration, or evaluation p
 
 - **Email:** ksheerooo@gmail.com
 - **LinkedIn:** [linkedin.com/in/ksheerajprakash](https://linkedin.com/in/ksheerajprakash)
-- **Private Repo:** [github.com/KsheerajP/Toxicity-Detection](https://github.com/KsheerajP)
+🔗 GitHub Repository (private): [https://github.com/KsheerajP/Toxicity-Detector.git](https://github.com/KsheerajP/Toxicity-Detector.git)
